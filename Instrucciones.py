@@ -9,9 +9,22 @@
     # Agregar definición[0]
     # Meterlos en formato json[0]
 
-# Pasarlos por pandas[0]
+#JSON en Python[0]
+    # Instalar pandas[0] 
+        # No sirve porque pandas pide el mismo número de filas en archivos json. Lo dejo por si luego se resuelve
+    # Importar pandas, json[1] 
+        # Sólo JSON
+    # Meterlo a python como diccionario [1]
+    # Pasarlos por pandas[1] No sirve.
+
+import json
+statenFile = open('D:\OneDrive\Proyectos\DRP\Statenvertaling.json', 'r', encoding='utf-8')
+staten = json.load(statenFile)
+statenFile.close()
+type(staten)
 
 # Pasarlos por spacy.nlp[0]
+    # Instalar spaCy
     # Convertir a lemmas[0]
     # Eliminar palabras innecesarias[0]
 
