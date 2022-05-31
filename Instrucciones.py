@@ -23,7 +23,6 @@ with open('D:\OneDrive\Proyectos\DRP\Statenvertaling.json', 'r', encoding='utf-8
         print(key, ":", value)
     # Done reading json file
 
-# [0] Convertir JSON a  
 
 # [0] Importar spacy
     # [1] Instalar spaCy
@@ -45,6 +44,12 @@ spacy.load('es_dep_news_trf')
     # [0] pasar pregunta por spacy.nlp
     # [0] Eliminar palabras innecesarias
     # [0] Convertir a lemmas
+
+# [0] Crear función para leer los json
+    # [0] For lectura in jsonFIle:
+    # [0] buscar en nombre, hiperónimos, cohipónimos, hipónimos, polisemia, antonimia, meronimia, definición
+    # [0] Contar coincidencias de acuerdo con la pregunta
+    # [0] Arrojar resultado de coincidencias
 
 # [0] Contar coincidencias pregunta a términos
     # [0] Ciclo for para contar
