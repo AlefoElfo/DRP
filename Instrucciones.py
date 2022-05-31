@@ -16,10 +16,14 @@
     # [1] Pasarlos por pandas (No sirve)
 
 import json
-statenFile = open('D:\OneDrive\Proyectos\DRP\Statenvertaling.json', 'r', encoding='utf-8')
-staten = json.load(statenFile)
-statenFile.close()
-type(staten)
+with open('D:\OneDrive\Proyectos\DRP\Statenvertaling.json', 'r', encoding='utf-8') as statenFile:
+    staten = json.load(statenFile)
+    # Decoded JSON Data From File
+    for key, value in staten.items():
+        print(key, ":", value)
+    # Done reading json file
+
+# [0] Convertir JSON a  
 
 # [0] Importar spacy
     # [1] Instalar spaCy
