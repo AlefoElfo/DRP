@@ -25,12 +25,14 @@
 
 
 import json
+
+from sympy import intersection
 with open('Statenvertaling.json', 'r', encoding='utf-8') as statenFile:
     staten = json.load(statenFile)
-    print('''-------
+    print('''--------------
 Archivo JSON ingresado como DICT''')
     print('Con', len(staten), 'atributos:')
-    print('-------')
+    print('--------------')
 for key,value in staten.items():
     print(key)
     statenValue = (str(value))
@@ -43,6 +45,7 @@ for key,value in staten.items():
 # [1] LIMPIAR STRING
     # [1] Eliminar residuos de json
     # [1] Hacer minúsculas todas las palabras
+# [0] Investigar si limpiar antes de NLP es más eficiente que con NLP de spacy
 
 residuosJSON = '''[]{}""':,'''
 replace = ''
@@ -50,9 +53,9 @@ for str in statenValue:
     if str in residuosJSON:
         statenValue = statenValue.replace(str, '')
 statenLower = statenValue.lower()
-print('''-------
+print('''--------------
 Archivo DICT se ha limpiado
--------''')
+--------------''')
 
 
 
@@ -76,12 +79,65 @@ Archivo DICT se ha limpiado
 import spacy
 nlp = spacy.load('es_dep_news_trf')
 statenNLP = (set(nlp(statenLower)))
-statenLemma = []
+statenLista = []
 for token in statenNLP:
     if not token.is_stop:
-        statenLemma.append(token.lemma_)
-print('''-------
+        if not token.is_punct:
+            statenLista.append(token.lemma_)
+print('''--------------
 Archivo DICT analizado por PLN
--------''')
-# statenAlone = set(statenNLP)
-print(statenLemma)
+''')
+print(type(statenLista))
+print('--------------')
+print(statenLista)
+
+
+
+
+# -----------------------------
+
+# [1] Hacer input de pregunta natural
+    # [1] Pedir pregunta al usuario
+    # [1] Convenrtir a string
+    # [1] Volver minúsculas
+    # [1] pasar pregunta por spacy.nlp
+    # [1] Limpiar puntuación
+    # [1] Eliminar palabras innecesarias
+    # [1] Convertir a lemmas
+
+pregunta = (input('Escribe lo que recuerdes: '))
+preguntaLower = nlp(pregunta.lower())
+preguntaLista = []
+for token in preguntaLower:
+    if not token.is_stop:
+        if not token.is_punct:
+            preguntaLista.append(token.lemma_)
+print(preguntaLista)
+
+
+
+# [0] Comparar las listas
+    # [0] 
+    # [0] 
+    # [0] 
+    # [0] 
+
+coincidencias = []
+for eS in statenLista:
+    for eP in preguntaLista:
+        if set(eS) == set(eP):
+            coincidencias.append(eS)
+print(len(coincidencias))
+
+
+# [0] Crear función para leer los json
+# [0] For lectura in jsonFIle:
+# [0] buscar en nombre, hiperónimos, cohipónimos, hipónimos, polisemia, antonimia, meronimia, definición
+# [0] Contar coincidencias de acuerdo con la pregunta
+# [0] Arrojar resultado de coincidencias
+
+# [0] Contar coincidencias pregunta a términos
+# [0] Ciclo for para contar
+# [0] Ordenar por orden descendente de conincidencias
+
+# [0] Mostrar al usuario el término con mayores coincidencias
