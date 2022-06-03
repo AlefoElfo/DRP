@@ -24,8 +24,8 @@ for str in pregunta:
         pregunta = pregunta.replace(str, '')
 preguntaLower = pregunta.lower()
 
-print(preguntaLower)
 
+print(preguntaLower)
 
 
 # [0] Crear función para leer los json
