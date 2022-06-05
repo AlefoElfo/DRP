@@ -1,17 +1,23 @@
 {
     "Nombre":"Statenvertaling",
+    "Sinónimos":["Statenbijbel","Traducción del estado","Biblia del Estado"],
     "Hiperónimos":["Traducción", "Biblia", "Escritos"],
-    "Cohipónimos":["Statenbijbel","Traducción del estado","Biblia del Estado"],
+    "Cohipónimos":["Statenbijbel","Biblia de Lutero", "Biblia del Oso"],
     "Hipónimos":["Libros","Canónicos","Deuterocanónicos"],
     "Polisemia":null,
     "Antonimia":null,
     "Meronimia":null,
     "Definición":[{
-        "Traducción":["idioma","receptor","mensaje","cambio","expresión","lenguaje","diferente","anterior","nuevo","intención"],
-        "Biblia":["escritura","sagrada","judeocristiana","judía","cristiana","palabra","letra","mensaje","vista","sagrado","santo","apartado","religioso","puro","sacro","cristianismo","religión","Cristo","fe","Dios","monoteísmo","judaísmo","Abraham","Isaac","Jacob"],
-        "neerlandés":["lengua","región","comunicación","idioma","lenguaje","dialecto","materno","natal","habla","comunicación","país"],
-        "Sínodo de Dordretch":["sínodo","internacional","ciudad","dordretch","iglesia","reforma","neerlandés","Países Bajos","calvinismo","calvino","arminio","arminianismo"],
-        "Estados generales de los Países Bajos":["gobierno","autoridad","países bajos","justicia","poder","política","país","espacio","frontera"]
+        "Traducción":
+            ["idioma","receptor","mensaje","cambio","expresión","lenguaje","diferente","anterior","nuevo","intención"],
+        "Biblia":
+            ["escritura","sagrada","judeocristiana","judía","cristiana","palabra","letra","mensaje","vista","sagrado","santo","apartado","religioso","puro","sacro","cristianismo","religión","Cristo","fe","Dios","monoteísmo","judaísmo","Abraham","Isaac","Jacob"],
+        "neerlandés":
+            ["lengua","región","comunicación","idioma","lenguaje","dialecto","materno","natal","habla","comunicación","país"],
+        "Sínodo de Dordretch":
+            ["sínodo","internacional","ciudad","dordretch","iglesia","reforma","neerlandés","Países Bajos","calvinismo","calvino","arminio","arminianismo"],
+        "Estados generales de los Países Bajos":
+            ["gobierno","autoridad","países bajos","justicia","poder","política","país","espacio","frontera"]
     }
     ]
 }

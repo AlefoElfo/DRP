@@ -15,8 +15,8 @@ Escribe lo que recuerdes y buscaré la mejor opción:
 pregunta = str(input())
 
 #LIMPIAR PREGUNTA
-   
-   
+
+
 preguntaPunct = '[!¡"\#¿?()=,.-_:;]'
 replace = ''
 for str in pregunta:
