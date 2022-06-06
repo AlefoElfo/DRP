@@ -45,9 +45,9 @@ for key,value in staten.items():
 
 residuosJSON = '''[]{}""':,'''
 replace = ''
-for str in statenValue:
-    if str in residuosJSON:
-        statenValue = statenValue.replace(str, '')
+for value in statenValue:
+    if value in residuosJSON:
+        statenValue = statenValue.replace(value, '')
 statenLower = statenValue.lower()
 print('''--------------
 Archivo DICT se ha limpiado
@@ -93,39 +93,34 @@ print(statenLista)
 
 
 
-# [1] Hacer input de pregunta natural
-    # [1] Pedir pregunta al usuario
-    # [1] Convenrtir a string
-    # [1] Volver minúsculas
-    # [1] pasar pregunta por spacy.nlp
-    # [1] Limpiar puntuación
-    # [1] Eliminar palabras innecesarias
-    # [1] Convertir a lemmas
-
-pregunta = (input('Escribe lo que recuerdes: '))
-preguntaLower = nlp(pregunta.lower())
-preguntaLista = []
-for token in preguntaLower:
-    if not token.is_stop:
-        if not token.is_punct:
-            preguntaLista.append(token.lemma_)
-
-
-# [0] Buscar coincidencias en lista de términos con lista de pregunta
-    # [0] Usar set para evita coincidencias repetidas 
-    # [0] Crear lista de coincidencias
-    # [0] Contar número de coincidencias
-
-coincidencias = []
-for eS in statenLista:
-    for eP in preguntaLista:
-        if set(eS) == set(eP):
-            coincidencias.append(eS)
-            coincidenciasSet = set(coincidencias)
-print('Hemos encontrado', len(coincidenciasSet), 'coincidencias:')
-print(coincidenciasSet)
-
-
-
-
-# [0] Mostrar al usuario el término con mayores coincidencias
+## [1] Hacer input de pregunta natural
+#    # [1] Pedir pregunta al usuario
+#    # [1] Convenrtir a string
+#    # [1] Volver minúsculas
+#    # [1] pasar pregunta por spacy.nlp
+#    # [1] Limpiar puntuación
+#    # [1] Eliminar palabras innecesarias
+#    # [1] Convertir a lemmas
+#
+#pregunta = (input('Escribe lo que recuerdes: '))
+#preguntaLower = nlp(pregunta.lower())
+#preguntaLista = []
+#for token in preguntaLower:
+#    if not token.is_stop:
+#        if not token.is_punct:
+#            preguntaLista.append(token.lemma_)
+#
+#
+## [0] Buscar coincidencias en lista de términos con lista de pregunta
+#    # [0] Usar set para evita coincidencias repetidas 
+#    # [0] Crear lista de coincidencias
+#    # [0] Contar número de coincidencias
+#
+#coincidencias = []
+#for eS in statenLista:
+#    for eP in preguntaLista:
+#        if set(eS) == set(eP):
+#            coincidencias.append(eS)
+#            coincidenciasSet = set(coincidencias)
+#print('Hemos encontrado', len(coincidenciasSet), 'coincidencias:')
+#print(coincidenciasSet)

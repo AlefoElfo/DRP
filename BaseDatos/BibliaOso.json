@@ -1,0 +1,23 @@
+{
+    "Nombre":"Biblia del Oso",
+    "Sinónimos":["Biblia de Casiodoro de Reina","Biblia de 1569"],
+    "Hiperónimos":["Traducción", "Biblia", "Escritos"],
+    "Cohipónimos":["Statenbijbel","Biblia de Lutero"],
+    "Hipónimos":["Libros","Canónicos","Deuterocanónicos"],
+    "Polisemia":null,
+    "Antonimia":null,
+    "Meronimia":null,
+    "Definición":[{
+        "Traducción":
+            ["idioma","receptor","mensaje","cambio","expresión","lenguaje","diferente","anterior","nuevo","intención"],
+        "Biblia":
+            ["escritura","sagrada","judeocristiana","judía","cristiana","palabra","letra","mensaje","vista","sagrado","santo","apartado","religioso","puro","sacro","cristianismo","religión","Cristo","fe","Dios","monoteísmo","judaísmo","Abraham","Isaac","Jacob"],
+        "Español":
+            ["lengua","región","comunicación","idioma","lenguaje","dialecto","materno","natal","habla","comunicación","país", "iberia", "ibérica", "España"],
+        "Casiodoro":
+            ["español","reformado","traductor"],
+        "Reina":
+            ["ciudad","lugar","países bajos","política","espacio","frontera"]
+    }
+    ]
+}
