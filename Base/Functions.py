@@ -17,8 +17,7 @@ def lee(file):
     
     with open(file, encoding='utf-8') as statenFile:
         staten = json.load(statenFile)
-        print('''--------------
-    Archivo JSON ingresado como DICT''')
+        print('''--------------\nArchivo JSON ingresado como DICT''')
         print('Con', len(staten), 'atributos:')
         print('--------------')
     for key,value in staten.items():
@@ -37,9 +36,7 @@ def lee(file):
         if value in residuosJSON:
             statenValue = statenValue.replace(value, '')
     statenLower = statenValue.lower()
-    print('''--------------
-    Archivo DICT se ha limpiado
-    --------------''')
+    print('''--------------\nArchivo DICT se ha limpiado\n--------------''')
 
 
     # [1] SPACY
@@ -62,10 +59,8 @@ def lee(file):
         if not token.is_stop:
             if not token.is_punct: #¿Qué es más eficiente para el procesador?
                 statenLista.append(token.lemma_)
-    print('''--------------
-    Archivo DICT analizado por PLN''')
+    print('''--------------\nArchivo DICT analizado por PLN''')
     print(type(statenLista))
-    print('--------------')
     print('Con un total de', len(statenLista), 'campos de búsqueda.')
     print('--------------')
 
@@ -90,7 +85,7 @@ def pregunta():
         if not token.is_stop:
             if not token.is_punct:
                 preguntaLista.append(token.lemma_)
-    return preguntaLower
+
     return preguntaLista
 
 
@@ -103,13 +98,17 @@ def coincide():
         # [1] Contar número de coincidencias
 
     coincidencias = []
+    statenLista = []
+    coincidenciasSet = []
     for eS in statenLista:
-        for eP in preguntaLista:
+        for eP in pregunta.preguntaLista:
             if set(eS) == set(eP):
                 coincidencias.append(eS)
-                coincidenciasSet = set(coincidencias)
-    conciden=('Hemos encontrado', len(coincidenciasSet), 'coincidencias:')
-    return coincidenciasSet
-    return coinciden
+                coincidenciasSet = coincidencias.append(set(coincidencias))
+                print ('Hemos encontrado', len(coincidenciasSet), 'coincidencias:')
+                return coincidenciasSet
+            elif set(eS) != set(eP):
+                print ('No encontramos coincidencias')
+
 
 # [0] Mostrar al usuario el término con mayores coincidencias
