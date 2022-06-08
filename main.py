@@ -1,4 +1,12 @@
-import Base.LecturaFunction as function
+print('Bienvenido al Diccionario de la Reforma Protestante')
 
-function.preguntame()
-#statenLista = function.read_file('BaseDatos/Statenvertaling.json')
+
+import Base.Functions as function
+#Functions:
+# lee
+# pregunta
+# coincide
+
+function.lee('BaseDatos/Statenvertaling.json')
+function.pregunta()
+function.coincide()

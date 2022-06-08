@@ -24,7 +24,7 @@
 
 
 import json
-with open('Statenvertaling.json', 'r', encoding='utf-8') as statenFile:
+with open('BaseDatos/Statenvertaling.json', 'r', encoding='utf-8') as statenFile:
     staten = json.load(statenFile)
     print('''--------------
 Archivo JSON ingresado como DICT''')
@@ -93,34 +93,35 @@ print(statenLista)
 
 
 
-## [1] Hacer input de pregunta natural
-#    # [1] Pedir pregunta al usuario
-#    # [1] Convenrtir a string
-#    # [1] Volver minúsculas
-#    # [1] pasar pregunta por spacy.nlp
-#    # [1] Limpiar puntuación
-#    # [1] Eliminar palabras innecesarias
-#    # [1] Convertir a lemmas
-#
-#pregunta = (input('Escribe lo que recuerdes: '))
-#preguntaLower = nlp(pregunta.lower())
-#preguntaLista = []
-#for token in preguntaLower:
-#    if not token.is_stop:
-#        if not token.is_punct:
-#            preguntaLista.append(token.lemma_)
-#
-#
-## [0] Buscar coincidencias en lista de términos con lista de pregunta
-#    # [0] Usar set para evita coincidencias repetidas 
-#    # [0] Crear lista de coincidencias
-#    # [0] Contar número de coincidencias
-#
-#coincidencias = []
-#for eS in statenLista:
-#    for eP in preguntaLista:
-#        if set(eS) == set(eP):
-#            coincidencias.append(eS)
-#            coincidenciasSet = set(coincidencias)
-#print('Hemos encontrado', len(coincidenciasSet), 'coincidencias:')
-#print(coincidenciasSet)
+# [1] Hacer input de pregunta natural
+    # [1] Pedir pregunta al usuario
+    # [1] Convenrtir a string
+    # [1] Volver minúsculas
+    # [1] pasar pregunta por spacy.nlp
+    # [1] Limpiar puntuación
+    # [1] Eliminar palabras innecesarias
+    # [1] Convertir a lemmas
+
+pregunta = (input('Escribe lo que recuerdes: '))
+preguntaLower = nlp(pregunta.lower())
+preguntaLista = []
+for token in preguntaLower:
+    if not token.is_stop:
+        if not token.is_punct:
+            preguntaLista.append(token.lemma_)
+
+
+# [0] Buscar coincidencias en lista de términos con lista de pregunta
+    # [0] Usar set para evita coincidencias repetidas 
+    # [0] Crear lista de coincidencias
+    # [0] Contar número de coincidencias
+
+coincidencias = []
+coincidenciasSet = []
+for eS in statenLista:
+    for eP in preguntaLista:
+        if set(eS) == set(eP):
+            coincidencias.append(eS)
+            coincidenciasSet = set(coincidencias)
+print('Hemos encontrado', len(coincidenciasSet), 'coincidencias:')
+print(coincidenciasSet)
