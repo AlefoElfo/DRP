@@ -1,21 +1,4 @@
-# DRP
-## Pasos
-* Digitalizar término statenvertaling
-  * Relaciones semánticas del lexema
-  * Definición
-* (2a versión) Digitalizar 5 términos
-  * Hacer tesauro manual
-  * Agregar definición
-* Meterlos en formato json
-* Pasarlos por pandas
-* Pasarlos por spacy.nlp
-  * Eliminar palabras innecesarias
-  * Convertir a lemmas
-* Hacer input de pregunta natural
-* pasar pregunta por spacy.nlp
-  * Eliminar palabras innecesarias
-  * Convertir a lemmas
-* Contar coincidencias pregunta a términos
-  * Ciclo for para contar
-  * Ordenar por orden descendente de conincidencias
-* Mostrar al usuario el término con mayores coincidencias
+# Tesis previa
+
+- Una [primera tesis](https://www.academia.edu/36764769/Metodolog%C3%ADa_para_la_elaboraci%C3%B3n_de_un_diccionario_de_la_Reforma_Protestante_y_muestra), en el STPM.
+- Una segunda, en la UNAM.
