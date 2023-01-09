@@ -8,11 +8,10 @@ Por el momento se muestra el trabajo gráfico y de código en este repositorio
 
 ## Gráficos en orden alfabético
 
-- Almacenamiento de un corpus (GECO). Gráfico 18
 - Comparación de tesauros (elaboración propia). Gráfico 17
 - Comunicación y diálogo. Gráfico 27
 - Consulta y diagrama arbóreo (elaboración propia). Gráfico 14
-- Diálogo sema-onomasiológico (elaboración propia). Gráfico 10
+- Diálogo sema-onomasiológico (gitelaboración propia). Gráfico 10
 - Diálogo y filosofía del lenguaje. Gráfico 26
 - Distancia bidimensional entre Biblia y Corán (elaboración propia). Gráfico 21
 - Distancia lineal entre Biblia y Corán (elaboración propia). Gráfico 20
